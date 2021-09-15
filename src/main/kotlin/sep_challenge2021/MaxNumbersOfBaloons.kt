@@ -2,6 +2,7 @@ package sep_challenge2021
 
 fun main() {
     val result = maxNumberOfBalloons("loonbalxballpoon")
+    assert(result == 2)
     println("result: $result")
 }
 
