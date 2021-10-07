@@ -9,6 +9,7 @@ fun main() {
     val res = WordSearch().exist(board, "ABCCED")
     println(res)
 }
+
 class WordSearch {
     private lateinit var board: Array<CharArray>
     private lateinit var word: String
@@ -18,7 +19,7 @@ class WordSearch {
         this.word = word
         for (i in board.indices) {
             for (j in board[i].indices) {
-                if (traverse(i, j,0)) return true
+                if (traverse(i, j, 0)) return true
             }
         }
         return false
@@ -34,7 +35,13 @@ class WordSearch {
         for (dir in dirs) {
             val newI = i + dir[0]
             val newJ = j + dir[1]
-            if (newI >= 0 && newI < board.size && newJ >=0 && newJ < board[0].size && board[newI][newJ] != '#') {
+            if (
+                newI >= 0 &&
+                newI < board.size &&
+                newJ >= 0 &&
+                newJ < board[0].size &&
+                board[newI][newJ] != '#'
+            ) {
                 result = result || traverse(newI, newJ, currentIndex + 1)
             }
         }
