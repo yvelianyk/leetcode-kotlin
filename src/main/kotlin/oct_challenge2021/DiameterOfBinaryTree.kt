@@ -23,8 +23,8 @@ class DiameterOfBinaryTree {
 
     private fun getMax(node: TreeNode?): Int {
         if (node == null) return 0
-        val left =  getMax(node.left)
-        val right =  getMax(node.right)
+        val left = getMax(node.left)
+        val right = getMax(node.right)
         max = maxOf(max, left + right)
         return maxOf(left, right) + 1
     }
