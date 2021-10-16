@@ -26,12 +26,8 @@ class BuyAndSellStocksIII {
     // operation: 0 - buy, 1 - sell
     private fun getMax(day: Int, operation: Int, transCount: Int): Int {
         if (day >= prices.size) return 0
-        if (transCount == 2) {
-            return 0
-        }
-        if (memo[day][operation][transCount] != -1) {
-            return memo[day][operation][transCount]
-        }
+        if (transCount == 2) return 0
+        if (memo[day][operation][transCount] != -1) return memo[day][operation][transCount]
         memo[day][operation][transCount] = when (operation) {
             0 -> {
                 val buy = -prices[day] + getMax(day + 1, 1, transCount)
