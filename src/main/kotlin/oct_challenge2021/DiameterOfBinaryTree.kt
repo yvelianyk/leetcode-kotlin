@@ -1,5 +1,7 @@
 package oct_challenge2021
 
+import common.TreeNode
+
 fun main() {
     val root = TreeNode(1)
     root.left = TreeNode(2)
@@ -28,10 +30,4 @@ class DiameterOfBinaryTree {
         max = maxOf(max, left + right)
         return maxOf(left, right) + 1
     }
-
-}
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }
