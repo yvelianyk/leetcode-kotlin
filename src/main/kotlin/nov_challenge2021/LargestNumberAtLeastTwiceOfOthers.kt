@@ -1,7 +1,7 @@
 package nov_challenge2021
 
 fun main() {
-    val result = LargestNumberAtLeastTwiceOfOthers().dominantIndex(intArrayOf(1,0))
+    val result = LargestNumberAtLeastTwiceOfOthers().dominantIndex(intArrayOf(1, 0))
     println(result)
 }
 
