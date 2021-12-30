@@ -7,7 +7,7 @@ fun main() {
 
 // Solved by using module addition and multiplication rules
 // 1. a + b = c. (a mod k + b mod k) mod k = c mod k
-// 2. a * b = c (a mod k * b mod k) mod k = c mod k
+// 2. a * b = c. (a mod k * b mod k) mod k = c mod k
 // Also:
 // 111 = 11 * 10 + 1
 // So, instead of keeping track of number and calculate reminder we can directly calculate reminder
