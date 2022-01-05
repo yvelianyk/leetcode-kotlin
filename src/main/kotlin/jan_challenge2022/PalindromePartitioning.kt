@@ -10,7 +10,7 @@ class PalindromePartitioning {
 
     fun partition(s: String): List<List<String>> {
         backtrack(0, s, mutableListOf())
-        return mutableListOf()
+        return result
     }
 
     private fun backtrack(index: Int, s: String, curr: MutableList<String>) {
