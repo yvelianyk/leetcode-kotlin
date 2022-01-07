@@ -9,29 +9,16 @@ fun main() {
 }
 
 class Problem3 {
-        fun asteroidsDestroyed(mass: Int, asteroids: IntArray): Boolean {
-        val treeSet = TreeSet<Long>()
-        treeSet.addAll(asteroids.map { it.toLong()}.toList())
+    fun asteroidsDestroyed(mass: Int, asteroids: IntArray): Boolean {
+        asteroids.sort()
         var currMass = mass.toLong()
-        var floor = treeSet.floor(currMass)?.toLong()
-        while (floor != null && floor <= currMass) {
-            currMass += floor
-            treeSet.remove(floor)
-            floor = treeSet.floor(currMass)
+        for (asteroid in asteroids) {
+            if (asteroid <= currMass) {
+                currMass += asteroid
+            } else {
+                return false
+            }
         }
-
-        return treeSet.size == 0
+        return true
     }
-//    fun asteroidsDestroyed(mass: Int, asteroids: IntArray): Boolean {
-//        asteroids.sort()
-//        var currMass = mass.toLong()
-//        for (asteroid in asteroids) {
-//            if (asteroid <= currMass) {
-//                currMass += asteroid
-//            } else {
-//                return false
-//            }
-//        }
-//        return true
-//    }
 }

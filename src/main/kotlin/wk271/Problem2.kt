@@ -1,14 +1,14 @@
 package wk271
 
 fun main() {
-    val res = Problem2().subArrayRanges(intArrayOf(1,2,3))
+    val res = Problem2().subArrayRanges(intArrayOf(1, 2, 3))
     println(res)
 }
 
 class Problem2 {
     private var result: Long = 0
     fun subArrayRanges(nums: IntArray): Long {
-        printSubArrays(nums, 0, 0 )
+        printSubArrays(nums, 0, 0)
         return result
     }
 
@@ -20,7 +20,7 @@ class Problem2 {
         } else {
             var min = Int.MAX_VALUE
             var max = Int.MIN_VALUE
-            for (i in start .. end) {
+            for (i in start..end) {
                 if (arr[i] >= max) {
                     max = arr[i]
                 }

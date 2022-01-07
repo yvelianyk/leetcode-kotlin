@@ -3,7 +3,7 @@ package wk271
 fun main() {
 //    val res = Problem3().minimumRefill(intArrayOf(2,2,3,3), 5 ,5)
 //    val res = Problem3().minimumRefill(intArrayOf(2,2,3,3), 3 ,4)
-    val res = Problem3().minimumRefill(intArrayOf(2,2,5,2,2), 5 ,5)
+    val res = Problem3().minimumRefill(intArrayOf(2, 2, 5, 2, 2), 5, 5)
     println(res)
 }
 
@@ -51,6 +51,5 @@ class Problem3 {
             bobCur--
         }
         return result
-
     }
 }
