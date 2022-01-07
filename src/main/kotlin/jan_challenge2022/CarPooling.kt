@@ -3,8 +3,8 @@ package jan_challenge2022
 fun main() {
     val res = CarPooling().carPooling(
         arrayOf(
-            intArrayOf(2,1,5),
-            intArrayOf(3,4,7),
+            intArrayOf(2, 1, 5),
+            intArrayOf(3, 4, 7),
         ),
         5
     )
